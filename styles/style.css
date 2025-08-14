@@ -3,3 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Playwrite RO", cursive;
+}   
