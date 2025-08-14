@@ -39,3 +39,32 @@ body{
     border: 3px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(10px);
 }
+
+.task-app h1{
+    font-size: 2rem;
+}
+
+
+
+.input-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-area input{
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(181, 181, 181, 0.388);
+    color: #2e2e2e;
+
+}
+
+.input-area input::placeholder{
+    color: rgb(112, 111, 111);
+}
