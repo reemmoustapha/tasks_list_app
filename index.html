@@ -11,15 +11,19 @@
     <script defer src="./scripts/index.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="task-app">
+    <nav class="navbar">
+        <h2>Tasks List App</h2>
+        <button id="new-task-btn"><i class="fa-solid fa-plus"></i>New</button>
+    </nav>
+    <div class="container" >
+        <div class="task-app hide" id="new">
             <h1>Tasks List <i class="fa-solid fa-list-check"></i></h1>
             <form class="input-area">
                 <input type="text" id="task-input" placeholder="Add a new task...">
                 <button type="submit" id="add-task-btn">Add</button>
             </form>
-            <div class="tasks-container">
-                <ul id="task-list"></ul>
+    <div class="tasks-container">
+        <ul id="task-list"></ul>
             </div>
 </body>
 </html>

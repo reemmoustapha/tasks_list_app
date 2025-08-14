@@ -1,20 +1,45 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
+}
+.navbar{
+    background-color: #FFD1DC;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 20px;
+    
 }
 
+
+.navbar button{
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: rgb(112, 111, 111);
+    font-size: 1.1rem;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+   
+    padding: 5px;
+    
+    cursor: pointer;
+    transition: 0.5s;
+}
 body{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background: url(../assets/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
     font-family: "Playwrite RO", cursive;
 }   
+
+
 
 .container{
     display: flex;
@@ -24,9 +49,11 @@ body{
     height: 100%;
     padding: 0 20px;
 }
+    
 
 .task-app{
-    width: 500px;
+    width: 100%;
+    max-width: 400px;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -40,6 +67,9 @@ body{
     backdrop-filter: blur(10px);
 }
 
+.hide{
+    display: none;
+}
 .task-app h1{
     font-size: 2rem;
 }
@@ -60,7 +90,7 @@ body{
     border: none;
     outline: none;
     border-radius: 22px;
-    background: rgba(181, 181, 181, 0.388);
+    background: #FFD1DC;
     color: #2e2e2e;
 
 }
@@ -68,3 +98,19 @@ body{
 .input-area input::placeholder{
     color: rgb(112, 111, 111);
 }
+
+.input-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    color: rgb(112, 111, 111);
+    font-size: 1.1rem;
+    background:#FFD1DC;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
