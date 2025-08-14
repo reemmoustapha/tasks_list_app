@@ -20,11 +20,14 @@ function addTask(event) {
     if (!taskText) return;
 
     var li = document.createElement('li');
-    li.textContent = taskText;
-
+    li.innerHTML =`
+    <input type ="checkbox" class="checkbox">
+    <span>${taskText}</span>
+    `;
+    
     taskList.appendChild(li);
     taskInput.value = '';
-}
+};
 
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
