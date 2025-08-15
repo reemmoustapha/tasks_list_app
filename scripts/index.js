@@ -14,7 +14,8 @@ var taskInput = document.getElementById('task-input');
 var addTaskBtn = document.getElementById('add-task-btn');
 var taskList = document.getElementById('task-list');
 
-
+addTaskBtn.addEventListener('click', addTask);
+taskInput.addEventListener('keypress', handleKeyPress);
 
 function addTask(event) {
     event.preventDefault();
@@ -32,13 +33,48 @@ function addTask(event) {
     <div class="task-buttons">
         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
         <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+    </div>
     `;
+     
+    var checkbox = li.querySelector(".checkbox");
+    var editBtn =li.querySelector(".edit-btn");
+    var deleteBtn = li.querySelector(".delete-btn")
 
-    
-    
+   
+
+    function toggleTaskStatus() {
+    if (checkbox.checked) {
+        li.classList.add('completed');
+        editBtn.disabled = true;
+    } else {
+        li.classList.remove('completed');
+        editBtn.disabled = false;
+    }
+}
+
+    function editTask() {
+        if (!checkbox.checked) {
+            taskInput.value = li.querySelector("span").textContent;
+            li.remove();
+        }
+    }
+
+    function deleteTask() {
+        li.remove();
+    }
+
+    checkbox.addEventListener('change', toggleTaskStatus);
+    editBtn.addEventListener('click', editTask);
+    deleteBtn.addEventListener('click', deleteTask);
+
     taskList.appendChild(li);
     taskInput.value = '';
-};
+}
+
+
+
+
+    
 
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
@@ -46,8 +82,7 @@ function handleKeyPress(event) {
     }
 }
 
-addTaskBtn.addEventListener('click', addTask);
-taskInput.addEventListener('keypress', handleKeyPress);
+
 
 
 
