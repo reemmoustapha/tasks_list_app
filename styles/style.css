@@ -215,4 +215,7 @@ body{
 }
 
 
-
+.error-message{
+    color: rgb(245, 35, 70);
+    font-size: 20px;
+}
