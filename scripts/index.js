@@ -15,6 +15,7 @@ var addTaskBtn = document.getElementById('add-task-btn');
 var taskList = document.getElementById('task-list');
 
 
+
 function addTask(event) {
     event.preventDefault();
     var taskText = taskInput.value.trim();
@@ -32,6 +33,8 @@ function addTask(event) {
         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
         <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
     `;
+
+    
     
     taskList.appendChild(li);
     taskInput.value = '';
