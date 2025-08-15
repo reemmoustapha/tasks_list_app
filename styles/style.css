@@ -175,3 +175,8 @@ body{
 .task-buttons .delete-btn{
     background: #f82556;
 }
+
+.edit-btn:disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+}
