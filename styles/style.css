@@ -124,3 +124,21 @@ body{
 .task-list{
     width: 100%;
 }
+
+.task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFD1DC;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    color: black;
+    position: relative;
+
+}
+
+.task-list li:hover{
+    box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
+}
+
