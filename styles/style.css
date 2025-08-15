@@ -63,7 +63,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
-    font-family: "Playwrite RO", cursive;
+    font-family: "poppins", arial, sans-serif;
 }   
 
 
@@ -167,6 +167,13 @@ body{
 .task-list li:hover{
     box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
 }
+ .checkbox{
+    margin-right: 5px;
+
+ }
+
+ 
+
 
 .task-buttons{
     display: flex;
