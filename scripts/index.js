@@ -10,6 +10,7 @@ NewTaskButton.addEventListener("click", toggleForm);
 var taskInput = document.getElementById('task-input');
 var addTaskBtn = document.getElementById('add-task-btn');
 var taskList = document.getElementById('task-list');
+var messageContainer = document.getElementById("error-message");
 
 addTaskBtn.addEventListener('click', addTask);
 taskInput.addEventListener('keydown', handleKeyPress);
@@ -123,12 +124,19 @@ function createTask(taskText, completed) {
 
 function addTask(event) {
     event.preventDefault();
-    var taskText = taskInput.value.trim();
-    if (!taskText) return;
+    var taskText = taskInput.value;
+    if (!taskText){
+        messageContainer.innerText =`Please enter a task!`
+        return;
+   }
+   messageContainer.innerText="";
 
-    createTask(taskText, false);
-    taskInput.value = '';
-    saveTaskToLocalStorage();
+   createTask(taskText, false);
+   taskInput.value = '';
+   saveTaskToLocalStorage();
+    
+
+    
 }
 
 
