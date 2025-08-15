@@ -17,6 +17,36 @@ taskInput.addEventListener('keydown', handleKeyPress);
 document.addEventListener("DOMContentLoaded", loadTasksFromLocalStorage);
 
 
+
+var filterButtons = document.querySelectorAll('.filter-buttons .filter-btn');
+filterButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var filter = button.dataset.filter;
+        var tasks = taskList.querySelectorAll('li');
+
+        tasks.forEach(function(task) {
+            if (filter === 'all') {
+                task.style.display = '';
+            } else if (filter === "completed") {
+                   if (task.classList.contains("completed")){
+                       task.style.display = "flex";
+                   } else {
+                       task.style.display = "none";
+                   }
+               } else if (filter === "pending") {
+                   if (!task.classList.contains("completed")){
+                        task.style.display = "flex";
+                   } else {
+                       task.style.display = "none";
+                   }
+            }
+        });
+    });
+});
+
+
+
+
 function saveTaskToLocalStorage() {
     var tasks = Array.from(taskList.querySelectorAll('li')).map(function(li) {
         return {
