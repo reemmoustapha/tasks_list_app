@@ -4,7 +4,7 @@
     
 }
 .navbar{
-    background-color: #FFD1DC;
+    background-color: #fff;
     backdrop-filter: blur(1px);
     display: flex;
     justify-content: space-between;
@@ -17,18 +17,23 @@
 
 .navbar button{
     width: 100px;
-    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 10px;
     color: rgb(112, 111, 111);
     font-size: 1.1rem;
-    background: rgb(255, 255, 255);
+    background: #f97694;
     border: 2px solid rgba(255, 255, 255, 0.18);
-   
     padding: 5px;
-    
     cursor: pointer;
     transition: 0.5s;
+    
 }
+
+.navbar h2{
+    margin-left: 10px;
+    color: #f97694;
+}
+
 body{ 
     background: url(../assets/background.jpg);
     background-repeat: no-repeat;
@@ -107,7 +112,7 @@ body{
     border-radius: 10px;
     color: rgb(112, 111, 111);
     font-size: 1.1rem;
-    background:#FFD1DC;
+    background:#f97694;
     border: 2px solid rgba(255, 255, 255, 0.18);
     cursor: pointer;
     transition: 0.5s;
@@ -152,8 +157,8 @@ body{
     background: #fe7d9b;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     color: #fff;
     font-size: 0.8rem;
     cursor: pointer;
@@ -161,6 +166,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 6px;
     
 }
 
@@ -179,4 +185,9 @@ body{
 .edit-btn:disabled{
     cursor: not-allowed;
     pointer-events: none;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: gray;
 }
